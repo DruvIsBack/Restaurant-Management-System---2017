@@ -13,7 +13,17 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="resources/images/img.jpg" alt="">John Doe
+                    <img src="filemanager/getfile/userphoto/${user.photo}.jpg" alt="">
+						${user.firstname}
+						<c:set var="middlename" value="${user.middlename}"/>
+						<c:if test="${not empty middlename}">
+							<c:out value="${middlename}"/>
+						</c:if>
+						${user.lastname}
+						<c:choose>
+							<c:when test="${user.usertype == 1}"> [Administrator] </c:when>
+							<c:otherwise> [Visitor] </c:otherwise>
+						</c:choose>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

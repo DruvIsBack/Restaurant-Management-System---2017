@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE xml>
+<data>
+	<usertype>
+		<id>1</id>
+		<name>Administer</name>
+	</usertype>
+	<usertype>
+		<id>2</id>
+		<name>Manager</name>
+	</usertype>
+	<usertype>
+		<id>3</id>
+		<name>Seller</name>
+	</usertype>
+</data>
