@@ -1,0 +1,11 @@
+#This file contains JPA Diagram Editor settings
+#Mon Jan 16 10:24:59 IST 2017
+supportOrmXml=false
+accessType=field
+defaultTableNamePrefix=
+defaultPackage=com.rms.persistences
+directEditAffectsClass=true
+diagramFolder=diagrams
+ormXmlFileName=META-INF/orm.xml
+collectionType=list
+oneToManyOldStyle=false
