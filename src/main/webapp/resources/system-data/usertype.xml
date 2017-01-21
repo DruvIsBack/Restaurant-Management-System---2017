@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE xml>
-<data>
+<usertypes>
 	<usertype>
 		<id>1</id>
 		<name>Administer</name>
@@ -13,4 +13,5 @@
 		<id>3</id>
 		<name>Seller</name>
 	</usertype>
-</data>
+</usertypes>
+	
