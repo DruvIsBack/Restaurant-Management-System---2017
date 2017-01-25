@@ -1,8 +1,6 @@
 package com.rms.controllers.pages;
 
 import java.io.File;
-import java.util.ArrayList;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +23,7 @@ import com.rms.models.Employee;
 import com.rms.models.Employees;
 import com.rms.persistences.User;
 import com.rms.services.UserService;
+import com.rms.services.UserTypeService;
 
 
 @Controller
@@ -41,6 +40,10 @@ public class MasterCient{
 	
 	@Autowired
 	FileIO fileIO;
+	
+	@Autowired
+	UserTypeService utservice; 
+	
 	
 	@RequestMapping(value="/test2",method=RequestMethod.GET)
 	public void test2(HttpServletRequest request, HttpServletResponse response) throws JAXBException{
@@ -60,7 +63,7 @@ public class MasterCient{
 	@RequestMapping(value="/test1",method=RequestMethod.GET)
 	 public void test1(HttpServletRequest request, HttpServletResponse response) throws JAXBException{
 		Employees employees = new Employees();
-	
+		
 	    Employee emp1 = new Employee();
 	    emp1.setId(1);
 	    emp1.setFirstName("Lokesh");
@@ -91,7 +94,7 @@ public class MasterCient{
 	 }
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
-	 public ModelAndView loginSignup(HttpServletRequest request, HttpServletResponse response) throws AddressException, MessagingException{
+	 public ModelAndView loginSignup(HttpServletRequest request, HttpServletResponse response) throws AddressException, MessagingException, JAXBException{
 		 ModelAndView model = new ModelAndView();
 		 User user = common.getUser(request);
 		 if(user == null){
@@ -99,7 +102,7 @@ public class MasterCient{
 				 model = new ModelAndView("admin_registration","adminRegForm",new User());
 			 }else{
 				 model = new ModelAndView("login");
-			 } 
+			 }
 		 }else{
 			 model = new ModelAndView("master","user",user);
 		 }

@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -53,7 +52,6 @@ public class FileIO {
 	        		Path path = Paths.get(realPathtoDownload+fileName);
 	        		System.out.println("File physical address : "+realPathtoDownload+fileName+".jpg");
 	        		if(file.exists()){
-	        			System.out.println("File exist you can do your next target...");
 	        			return Files.readAllBytes(path);
 	        		}else{
 	        			System.out.println("File not exist...");

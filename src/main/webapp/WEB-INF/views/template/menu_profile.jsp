@@ -5,7 +5,7 @@
 
 <div class="profile clearfix">
 	<div class="profile_pic">
-		<img src="filemanager/getfile/userphoto/${user.photo}.jpg" alt="..." class="img-circle profile_img">
+		<img src="filemanager/getfile/userphoto/${user.photo}.jpg" alt="User photo" class="img-circle profile_img">
 	</div>
 	<div class="profile_info">
 		<span>Welcome,</span>
