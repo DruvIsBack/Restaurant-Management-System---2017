@@ -17,10 +17,7 @@
 			</c:if>
 			${user.lastname}
 			<br>
-			<c:choose>
-				<c:when test="${user.usertype == 1}"> [ Administrator ] </c:when>
-				<c:otherwise> [Visitor] </c:otherwise>
-			</c:choose>
+			[ ${usertype} ]
 		</h2>
 	</div>
 </div>

@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ page import="com.rms.services.UserTypeService" session="true"%>
 
 <div class="top_nav">
           <div class="nav_menu">
@@ -20,10 +21,7 @@
 							<c:out value="${middlename}"/>
 						</c:if>
 						${user.lastname}
-						<c:choose>
-							<c:when test="${user.usertype == 1}"> [Administrator] </c:when>
-							<c:otherwise> [Visitor] </c:otherwise>
-						</c:choose>
+						[ ${usertype} ]
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -35,7 +33,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="/rms/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
