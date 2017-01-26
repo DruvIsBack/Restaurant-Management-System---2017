@@ -17,7 +17,7 @@
 			</c:if>
 			${user.lastname}
 			<br>
-			[ ${usertype} ]
+			[${usertype}]
 		</h2>
 	</div>
 </div>

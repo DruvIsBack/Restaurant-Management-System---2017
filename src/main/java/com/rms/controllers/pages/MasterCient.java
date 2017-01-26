@@ -2,6 +2,7 @@ package com.rms.controllers.pages;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.rms.controllers.iofunc.Common;
@@ -53,9 +56,22 @@ public class MasterCient{
 		 }
 		 return model;
 	 }
+	
 	@RequestMapping(value="/logout",method=RequestMethod.GET)
-	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response){
-		System.out.println("hello");
-		return new ModelAndView("master");
+	public ModelAndView logout(WebRequest request,HttpServletResponse response, SessionStatus status){
+		status.setComplete();
+	    request.removeAttribute("userAuth", WebRequest.SCOPE_SESSION);
+	    
+	    Cookie cookie = new Cookie("uid", null);
+	    cookie.setHttpOnly(true);
+	    cookie.setMaxAge(0);
+	    response.addCookie(cookie);
+	    
+	    cookie = new Cookie("pass", null);
+	    cookie.setHttpOnly(true);
+	    cookie.setMaxAge(0);
+	    response.addCookie(cookie);
+	    
+	    return new ModelAndView("redirect:/");
 	}
 }

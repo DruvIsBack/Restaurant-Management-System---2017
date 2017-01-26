@@ -21,7 +21,7 @@
 							<c:out value="${middlename}"/>
 						</c:if>
 						${user.lastname}
-						[ ${usertype} ]
+						[${usertype}]
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
