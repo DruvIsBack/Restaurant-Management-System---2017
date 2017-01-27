@@ -8,14 +8,25 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-handshake-o"></i> Transactions <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Transaction">
+                  	<a>
+                  		<i class="fa fa-handshake-o"></i> 
+                  		Transactions 
+                  		<span class="fa fa-chevron-down"></span>
+                  	</a>
                     <ul class="nav child_menu">
                       <li><a>Sell Items</a></li>
                       <li><a>Pay Roll</a></li>
                       <li><a>Withdraw</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-shopping-basket "></i> Inventory <span class="fa fa-chevron-down"></span></a>
+                  
+                  <li data-toggle="tooltip" title="Inventory">
+                  	<a>
+                  		<i class="fa fa-shopping-basket "></i> 
+                  		Inventory 
+                  		<span class="fa fa-chevron-down"></span>
+                  	</a>
                     <ul class="nav child_menu">
                       <li><a>Add Item</a></li>
                       <li><a>Drop Item</a></li>
@@ -24,14 +35,17 @@
                     </ul>
                   </li>
                   
-                  <li><a><i class="fa fa-gift"></i> Offer and Discount <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Offer and Discount">
+                  	<a>
+                  		<i class="fa fa-gift"></i> 
+                  		Offer and Discount 
+                  		<span class="fa fa-chevron-down"></span>
+                  	</a>
                     <ul class="nav child_menu">
-                      <li><a>Employee Recruitment</a></li>
-                      <li><a>Warning Employee</a></li>
-                      <li><a>Suspend Employee</a></li>
-                      <li><a>Resignation Myself</a></li>
-                      <li><a>Edit Company Info</a></li>
-                      <li><a>Backup / Restore Data</a></li>
+                      <li><a>Set</a></li>
+                      <li><a>View</a></li>
+                      <li><a>Alter</a></li>
+                      <li><a>Drop</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -39,19 +53,19 @@
 			  <div class="menu_section">
                 <h3>Report, View and Control</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-binoculars"></i> Particular <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Particular"><a><i class="fa fa-binoculars"></i> Particular <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a>Invoice</a></li>
                     </ul>
                   </li>
                 
-                  <li><a><i class="fa fa-book"></i> Selling Report <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Selling Report"><a><i class="fa fa-book"></i> Selling Report <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a>Day-to-day</a></li>
                     </ul>
                   </li>
                   
-                  <li><a><i class="fa fa-shopping-basket "></i> Inventory Report <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Inventory Report"><a><i class="fa fa-shopping-basket "></i> Inventory Report <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a>Stock</a></li>
                       <li><a>Most sell items</a></li>
@@ -59,13 +73,13 @@
                       <li><a>What to do</a>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-users"></i> Employee Report <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Employee Report"><a><i class="fa fa-users"></i> Employee Report <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a>Activities</a></li>
                       <li><a>Sell Report</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-legal"></i> Decision Taking <span class="fa fa-chevron-down"></span></a>
+                  <li data-toggle="tooltip" title="Decision Taking"><a><i class="fa fa-legal"></i> Decision Taking <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a>Employee Recruitment</a></li>
                       <li><a>Warning Employee</a></li>

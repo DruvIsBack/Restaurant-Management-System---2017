@@ -13,13 +13,15 @@
 
 	<!-- JQuery -->
 	<script src="resources/libs/jquery.min.js"></script>
-	<!-- Bootstrap -->
+	<!-- Bootstrap JS -->
+    <script src="resources/libs/bootstrap_lib/js/bootstrap.min.js"></script>
+	<!-- Bootstrap Input Validator -->
     <script src="resources/libs/input_validator.min.js"></script>
 	<!-- Bootstrap DatePicker CSS-->
 	<link href="resources/libs/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css" rel="stylesheet">
 	<!-- Bootstrap DatePicker JS-->
 	<script type="text/javascript" src="resources/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="resources/libs/bootstrap_lib/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="resources/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -53,19 +55,15 @@
             <!-- footer content --><jsp:include page="template/footer_content.jsp" />
       </div>
     </div>
-
     <!-- jQuery -->
     <script src="resources/libs/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="resources/libs/bootstrap_lib/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <script src="resources/libs/fastclick.js"></script>
     <!-- NProgress -->
     <script src="resources/libs/nprogress/nprogress.js"></script>
     <!-- validator -->
     <script src="resources/libs/input_validator.min.js"></script>
-
     <!-- Custom Theme Scripts -->
-    <script src="resources/build/js/custom.min.js"></script>
+    <script src="resources/build/js/custom.js"></script>
   </body>
 </html>

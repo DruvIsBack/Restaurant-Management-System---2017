@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.rms.persistences.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer>{
+public interface UserRepository extends JpaRepository<User, Long>{
 	@Query("SELECT COUNT(*) FROM User WHERE usertype=1")
 	public long getAllAdminCount();
 	

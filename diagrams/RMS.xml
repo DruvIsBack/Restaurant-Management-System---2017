@@ -1,45 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE xml>
-<entities>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
-		<entity-name>com.rms.persistences.Item</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>80</entity-X-Coordinate>
-		<entity-Y-Coordinate>221</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>com.rms.persistences.StockAndPrice</entity-name>
+		<entity-name>com.rms.persistences.Messages</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>206</entity-height>
-		<entity-X-Coordinate>70</entity-X-Coordinate>
-		<entity-Y-Coordinate>77</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>com.rms.persistences.QuantityType</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>70</entity-X-Coordinate>
-		<entity-Y-Coordinate>379</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>com.rms.persistences.Branch</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>166</entity-height>
-		<entity-X-Coordinate>478</entity-X-Coordinate>
-		<entity-Y-Coordinate>60</entity-Y-Coordinate>
+		<entity-X-Coordinate>441</entity-X-Coordinate>
+		<entity-Y-Coordinate>70</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -48,9 +13,9 @@
 	<entity>
 		<entity-name>com.rms.persistences.User</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>510</entity-X-Coordinate>
-		<entity-Y-Coordinate>379</entity-Y-Coordinate>
+		<entity-height>386</entity-height>
+		<entity-X-Coordinate>132</entity-X-Coordinate>
+		<entity-Y-Coordinate>75</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

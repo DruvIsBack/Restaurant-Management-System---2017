@@ -10,6 +10,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import com.rms.persistences.PersonalMessages;
+import java.util.List;
+import javax.persistence.OneToMany;
 
 @Entity
 @Table
@@ -33,6 +36,8 @@ public class User implements Serializable {
 	private Boolean isBlock;		//For login allow/block
 	@ManyToOne
 	private Branch branch;
+	@OneToMany(mappedBy = "sender")
+	private List<PersonalMessages> personalMessages;
 	public long getId() {
 		return id;
 	}
@@ -119,5 +124,11 @@ public class User implements Serializable {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public List<PersonalMessages> getMessages() {
+	    return personalMessages;
+	}
+	public void setMessages(List<PersonalMessages> param) {
+	    this.personalMessages = param;
 	}
 }

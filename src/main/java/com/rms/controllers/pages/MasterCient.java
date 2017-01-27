@@ -17,7 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.rms.controllers.iofunc.Common;
 import com.rms.controllers.iofunc.FileIO;
+import com.rms.persistences.PersonalMessages;
 import com.rms.persistences.User;
+import com.rms.services.PersonalMessagesService;
 import com.rms.services.UserService;
 import com.rms.services.UserTypeService;
 
@@ -39,6 +41,27 @@ public class MasterCient{
 	
 	@Autowired
 	UserTypeService utservice; 
+	
+	@Autowired
+	PersonalMessagesService msgService;
+	
+	@RequestMapping(value="/test1",method=RequestMethod.GET)
+	public void test1(){
+		PersonalMessages msg = new PersonalMessages();
+		User sender = userService.findById(1);
+		User receiver = userService.findById(2);
+		sender.toString();
+		receiver.toString();
+		msg.setDefault(sender, receiver);
+		msg.setMessage("hello bubai");
+		msgService.sendMessage(msg);
+	}
+	
+	@RequestMapping(value="/test2",method=RequestMethod.GET)
+	public void test2(){
+		User receiver = userService.findById(2);
+		msgService.getMsgsByReceiver(receiver);
+	}
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	 public ModelAndView loginSignup(HttpServletRequest request, HttpServletResponse response) throws AddressException, MessagingException, JAXBException{
