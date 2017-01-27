@@ -19,7 +19,6 @@ public class PersonalMessages implements Serializable {
 	private long id;
 	private String message;
 	private Date time;
-	private Boolean seen;
 	@ManyToOne
 	private User sender;
 	@ManyToOne
@@ -28,7 +27,6 @@ public class PersonalMessages implements Serializable {
 	public void setDefault(User sender, User receiver){
 		this.message = "";
 		this.time = new Date();
-		this.seen = false;
 		this.sender = sender;
 		this.receiver = receiver;
 	}
@@ -57,14 +55,6 @@ public class PersonalMessages implements Serializable {
 		this.time = time;
 	}
 
-	public Boolean getSeen() {
-		return seen;
-	}
-
-	public void setSeen(Boolean seen) {
-		this.seen = seen;
-	}
-
 	public User getSender() {
 		return sender;
 	}
@@ -87,7 +77,7 @@ public class PersonalMessages implements Serializable {
 
 	@Override
 	public String toString() {
-		return "PersonalMessages [id=" + id + ", message=" + message + ", time=" + time + ", seen=" + seen + ", sender="
+		return "PersonalMessages [id=" + id + ", message=" + message + ", time=" + time + ", sender="
 				+ sender + ", receiver=" + receiver + "]";
 	}
 }

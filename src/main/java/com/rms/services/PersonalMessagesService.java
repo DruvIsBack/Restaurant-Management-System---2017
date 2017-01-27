@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import com.rms.persistences.PersonalMessages;
 import com.rms.persistences.User;
 import com.rms.repositories.PersonalMessagesRepository;
@@ -34,7 +35,7 @@ public class PersonalMessagesService{
 		}
 	}
 	
-	public PersonalMessages setSeenUpdate(PersonalMessages msg){
+	/*public PersonalMessages setSeen(PersonalMessages msg){
 		msg.setSeen(true);
 		try{
 			msgsRepo.save(msg);
@@ -43,9 +44,23 @@ public class PersonalMessagesService{
 			e.printStackTrace();
 			return null;
 		}
-	}
+	}*/
 	
 	public List<PersonalMessages> getMsgsByReceiver(User receiver){
 		return msgsRepo.findByReceiver(receiver);
+		/*List<PersonalMessages> seen_msgs = new ArrayList<PersonalMessages>();
+		for(PersonalMessages msg: msgs){
+			if(msg.getSeen()){
+				seen_msgs.add(msg);
+			}
+		}
+		Collections.sort(seen_msgs,new MessageTimeComparator());
+		System.out.println("Personal already seen messages sorted....");
+		if(seen_msgs.size() > 10){
+			for(PersonalMessages msg: seen_msgs){
+				System.out.println(msg.toString());
+			}
+		}
+		return seen_msgs;*/
 	}
 }

@@ -43,16 +43,16 @@
               </a>
             </div>
             <div class="clearfix"></div>
-            	<!-- menu profile quick info --><jsp:include page="template/menu_profile.jsp" />
+            	<!-- menu profile quick info --><jsp:include page="template/menu_profile.jsp"/>
             <br />
-            	<!-- sidebar menu --><jsp:include page="template/sidebar_menu.jsp" />
-            	<!-- menu footer buttons --><jsp:include page="template/menu_footer_buttons.jsp" />
+            	<!-- sidebar menu --><jsp:include page="template/sidebar_menu.jsp"/>
+            	<!-- menu footer buttons --><jsp:include page="template/menu_footer_buttons.jsp"/>
           </div>
         </div>
-            <!-- top navigation --><jsp:include page="template/top_navigation.jsp" />
-            <!-- page content --><jsp:include page="template/page_content.jsp" />
+            <!-- top navigation --><jsp:include page="template/top_navigation.jsp"/>
+            <!-- page content --><jsp:include page="template/page_content.jsp"/>
             
-            <!-- footer content --><jsp:include page="template/footer_content.jsp" />
+            <!-- footer content --><jsp:include page="template/footer_content.jsp"/>
       </div>
     </div>
     <!-- jQuery -->

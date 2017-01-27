@@ -1,5 +1,7 @@
 package com.rms.controllers.pages;
 
+import java.util.List;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.servlet.http.Cookie;
@@ -60,7 +62,8 @@ public class MasterCient{
 	@RequestMapping(value="/test2",method=RequestMethod.GET)
 	public void test2(){
 		User receiver = userService.findById(2);
-		msgService.getMsgsByReceiver(receiver);
+		int count = msgService.getMsgsByReceiver(receiver).size();
+		System.out.println("Total messages found => "+count);
 	}
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
@@ -74,7 +77,10 @@ public class MasterCient{
 				 model = new ModelAndView("login");
 			 }
 		 }else{
+			 List<PersonalMessages> msgs = msgService.getMsgsByReceiver(user);
+			 System.out.println("Total new message found : "+msgs.size());
 			 model = new ModelAndView("master","user",user);
+			 model.addObject("msgs",msgs);
 			 model.addObject("usertype",utservice.getNameById(user.getUsertype()));
 		 }
 		 return model;

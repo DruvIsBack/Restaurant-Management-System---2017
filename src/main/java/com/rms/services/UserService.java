@@ -32,7 +32,7 @@ public class UserService{
 	public void saveUser(User user) {
 		userRepository.save(user);
 	}
-	public User findById(int id) {
-		return (User)userRepository.findOne((long)id);
+	public User findById(long id) {
+		return (User)userRepository.findOne(id);
 	}
 }
