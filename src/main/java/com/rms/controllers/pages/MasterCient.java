@@ -1,6 +1,9 @@
 package com.rms.controllers.pages;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -24,7 +27,6 @@ import com.rms.persistences.User;
 import com.rms.services.PersonalMessagesService;
 import com.rms.services.UserService;
 import com.rms.services.UserTypeService;
-
 
 @Controller
 public class MasterCient{
@@ -66,6 +68,12 @@ public class MasterCient{
 		System.out.println("Total messages found => "+count);
 	}
 	
+	@RequestMapping(value="/test3",method=RequestMethod.GET)
+	public void test3() throws ParseException{
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy h:mm:ss a", Locale.ENGLISH);
+		System.out.println(common.getTimeCountFromToday(sdf.parse("Oct 15, 2012 1:07:13 PM")));
+	}
+	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	 public ModelAndView loginSignup(HttpServletRequest request, HttpServletResponse response) throws AddressException, MessagingException, JAXBException{
 		 ModelAndView model = new ModelAndView();
@@ -77,7 +85,7 @@ public class MasterCient{
 				 model = new ModelAndView("login");
 			 }
 		 }else{
-			 List<PersonalMessages> msgs = msgService.getMsgsByReceiver(user);
+			 List<PersonalMessages> msgs = msgService.getUnreadMsgs(user);
 			 System.out.println("Total new message found : "+msgs.size());
 			 model = new ModelAndView("master","user",user);
 			 model.addObject("msgs",msgs);

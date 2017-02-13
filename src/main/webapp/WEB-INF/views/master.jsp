@@ -30,8 +30,9 @@
     
     <!-- Custom Theme Style -->
     <link href="resources/build/css/custom.min.css" rel="stylesheet">
+    <!-- JQuery -->
+	<script type="text/javascript" src="resources/js/custom_master.js"></script>
   </head>
-
    <body class="nav-md">
     <div class="container body">
       <div class="main_container">

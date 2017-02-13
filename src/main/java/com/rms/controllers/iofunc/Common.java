@@ -2,6 +2,7 @@ package com.rms.controllers.iofunc;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -59,5 +60,18 @@ public class Common{
 				}
 		}
 		return null;
+	}
+	
+	public String getTimeCountFromToday(Date date) throws ParseException{
+		//SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy h:mm:ss a", Locale.ENGLISH);
+		Date currentDate = new Date();
+		long sec = (long)(currentDate.getTime() - date.getTime())/1000;
+		long min = (long)sec/60;
+		sec = (long)sec % 60;
+		long hour = (long)min/60;
+		min = (long)min % 60;
+		long day = (long)hour/24;
+		hour = (long)hour%24;
+		return "Day => "+day+", Hours => "+hour+", Minuites => "+min+", Seconds => "+sec;
 	}
 }

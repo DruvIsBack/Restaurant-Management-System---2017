@@ -1,7 +1,6 @@
 package com.rms.services;
 
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +19,9 @@ public class PersonalMessagesService{
 	
 	@Autowired
 	private PersonalMessagesRepository msgsRepo;
+	
+	@Autowired
+	private UserService userService;
 	
 	public Boolean sendMessage(PersonalMessages msg){
 		//Need some object validation here
@@ -62,5 +64,14 @@ public class PersonalMessagesService{
 			}
 		}
 		return seen_msgs;*/
+	}
+	public PersonalMessages fetchMessageObjForAlert(PersonalMessages msg){
+		msg.setMessage(msg.getMessage().substring(0, 70).trim());
+		msg.setSender(userService.findById(msg.getSender().getId()));
+		return msg;
+	}
+	
+	public List<PersonalMessages> getUnreadMsgs(User receiver){
+		return msgsRepo.getUnread(receiver.getId());
 	}
 }
